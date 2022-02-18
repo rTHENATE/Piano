@@ -1,0 +1,49 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to right, rgb(12, 0, 78), rgb(10, 0, 54));
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piano{
+    display: flex;
+    border: 10px solid rgb(255, 255, 255);
+}
+
+.key{
+    height: calc(var(--width) *4);
+    width: var(--width);
+    box-shadow: inset 0px 0px 5px rgb(243, 243, 243);
+}
+
+.White{
+    --width: 90px;
+    height: 350px;
+    background-color: white;
+    border: 2px solid #333;
+}
+
+.Black
+{
+    --width: 60px;
+    height: 240px;
+    background-color: black;
+    margin-left: calc(var(--width) / -2);
+    margin-right: calc(var(--width) / -2);
+    z-index: 1;
+    border: 1px solid #333;
+}
+
+.White.active{
+    background-color: #ccc;
+}
+
+.Black.active{
+    background-color: #333;
+}
